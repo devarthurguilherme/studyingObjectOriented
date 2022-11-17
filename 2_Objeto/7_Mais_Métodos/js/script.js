@@ -16,4 +16,17 @@ console.log(pessoa.idade)
 
 pessoa.dizerIdade()
 
-/*4:10 */
+let calculadora = {
+    numeros: 0,
+    somar(a, b) {
+        this.numeros = a + b;
+    },
+    subtracao(a) {
+        this.numeros -= a;
+    }
+}
+
+calculadora.somar(4, 6)
+console.log(calculadora.numeros);
+calculadora.subtracao(7);
+console.log(calculadora.numeros)

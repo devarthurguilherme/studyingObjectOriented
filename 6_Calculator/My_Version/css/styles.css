@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/*color pallet https://www.nicepng.com/maxp/u2w7a9u2q8a9o0o0/*/ 
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+/*End of General*/
+/*Calculator*/
+#screenBox {
+    padding: 2rem 15rem;
+    min-height: 100vh;
+    position: relative;
+}
+#calculator {
+    width: 40rem;
+    height: 50rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.603);
+    background-color: #5C5C5C;
+    color: #333333;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+#displayContainer {
+    width: 100%;
+    height: 9rem;
+    background-color: #F2F2F2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    position: relative;
+    border-radius: 2.5rem;
+    text-align: right;
+    padding: 1rem;
+    font-size: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+   
+}
+
+#equals {
+    background-color: #F5AF4C;
+    color: #fff;
+}
+
+/*End of Calculator*/

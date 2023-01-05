@@ -59,11 +59,39 @@ class Calculator {
         let result = 0;
         
         for(let i = 0; i < operationValueArray.length; i++) {
-
+            let operation = 0;
             let actualItem = operationValueArray[i];
 
-            if(actualItem == "+") {
-                result = parseFloat(operationValueArray[i - 1]) + parseFloat(operationValueArray[i + 1]);
+            if(actualItem == "x") {
+                // Do multiplication
+                result = calculator.multiplication(operationValueArray[i - 1], operationValueArray[i + 1]);
+                operation = 1;
+                // Do division
+            } else if(actualItem == "/") {
+                result = calculator.division(operationValueArray[i - 1], operationValueArray[i + 1]);
+                operation = 1;
+                // To check if array has multiplication and division to be done
+            } else if(!operationValueArray.includes("x") && !operationValueArray.includes("/")) {
+                // add and subtraction
+                if(actualItem == "+") {
+                    // Do add
+                    result = calculator.plus(operationValueArray[i - 1], operationValueArray[i + 1]);
+                    operation = 1;
+                    // Do subtraction
+                } else if (actualItem == "-") {
+                    result = calculator.subtraction(operationValueArray[i - 1], operationValueArray[i + 1]);
+                    operation = 1;
+                }
+            }
+
+            //To update values of array to next operation
+            if(operation) {
+                //Last index in result of operation
+                operationValueArray[i - 1] = result;
+                // It removes items used to operation
+                operationValueArray.splice(i, 2)
+                //To update value of index
+                i = 0;
             }
 
         }
@@ -117,7 +145,10 @@ class Calculator {
                 }
 
                 if(operationValue == "0") {
-                    calculator.operationValue.textContent = input;
+                    if(reg.test(input)) {
+                        calculator.operationValue.textContent = input;
+                    }
+                    
                 } else {
                     calculator.operationValue.textContent += input;
                 }

@@ -120,3 +120,40 @@ h1 {
     color: #fff;
 }
 /*End of Calculator*/
+/*Responsive Design*/
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #displayContainer {
+        padding: 0.6rem;
+        margin-bottom: 1rem;
+    }
+
+    #calculator {
+        width: 50rem;
+        height: 60rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        margin-top: 2rem;
+    }
+    #displayContainer {
+        height: 12rem;
+    }
+
+    #buttonsContainer {
+        margin-top: 2rem;
+    }
+
+    .btn {
+        width: 11rem;
+        height: 7rem;
+        line-height: 7rem;
+        font-size: 4rem;
+    }
+}
+
+
+/*End of Responsive Design*/

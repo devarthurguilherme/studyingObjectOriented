@@ -54,6 +54,7 @@ h1 {
     white-space: nowrap;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
     color: #000;
    
@@ -121,6 +122,12 @@ h1 {
 }
 /*End of Calculator*/
 /*Responsive Design*/
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+}
+
 @media (max-width: 768px) {
 
     h1 {
@@ -130,6 +137,12 @@ h1 {
     #displayContainer {
         padding: 0.6rem;
         margin-bottom: 1rem;
+        font-size: 5rem;
+    }
+
+    #resultNumber {
+        font-size: 5.4rem;
+        margin-top: -0.7rem;
     }
 
     #calculator {
@@ -154,6 +167,95 @@ h1 {
         font-size: 4rem;
     }
 }
+
+@media (max-width: 425px) {
+    #screenBox {
+        padding: 1rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #calculator {
+        width: 40rem;
+        height: 50rem;
+    }
+
+    #buttonsContainer {
+        margin-top: 1rem;
+    }
+
+    .btn {
+        width: 9rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    #calculator {
+        width: 35rem;
+        height: 50rem;
+    }
+
+    .btn {
+        width: 7.5rem;
+        font-size: 4rem;
+    }
+
+    #zero {
+        width: 16rem;
+    }
+
+    #equals {
+        width: 16rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #calculator {
+        width: 30rem;
+        height: 45rem;
+    }
+
+    #displayContainer {
+        height: 10rem;
+        font-size: 3.5rem;
+    }
+    
+    #resultNumber {
+        font-size: 4.3rem;
+        margin-top: -0.4rem;
+    }
+
+    .btn {
+        width: 6.5rem;
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 4rem;
+    }
+
+    #zero {
+        width: 13rem;
+    }
+
+    #equals {
+        width: 13rem;
+    }
+}
+
 
 
 /*End of Responsive Design*/

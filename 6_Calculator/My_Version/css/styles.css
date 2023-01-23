@@ -129,6 +129,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    #screenBox {
+        padding: 2rem 2rem;
+        min-height: 100vh;
+        position: relative;
+        text-align: center;
+    }
 
     h1 {
         font-size: 3rem;

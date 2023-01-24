@@ -9,7 +9,6 @@ Carro.prototype.calota = false;
 
 let Fusca = new Carro("VW", 100000);
 
-console.log(Fusca.calota);
-delete Fusca.calota;
-
-console.log(Fusca.calota);
+for(prop in Fusca) {
+    console.log(`${prop} -> ${Fusca[prop]}`)
+}

@@ -1,21 +1,24 @@
-class Human {
+class Humano {
 
-    constructor(n, y) {
-        this.name = n;
-        this.year = y;
-    };
-
-    get nameOfPeople() {
-        return `The name of the people is ${this.name}`
-    };
-
-    set changeName(newName) {
-        this.name = `My name is ${newName}`;
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
 
+    set nomeDaPessoa(novoNome) {
+        this.nome = "Novo nome é " + novoNome;
+    }
+
+    get receberNome() {
+        return "O nome da pessoa é: " + this.nome;
+    }
 }
 
-let Arthur = new Human("Arthur Guilherme", 30);
-console.log(Arthur.nameOfPeople);
+let arthur = new Humano("Arthur Guilherme", 30);
+console.log(arthur);
+console.log(typeof Humano);
 
-console.log(Arthur.changeName("Guiller"))
+arthur.nomeDaPessoa = "Guilherme";
+console.log(arthur.receberNome)
+
+console.log(arthur.nome)

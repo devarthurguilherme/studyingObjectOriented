@@ -1,42 +1,74 @@
 class ToDo {
+
     constructor() {
         this.totalTasks = document.querySelectorAll(".task").length;
     }
 
     addTask(taskText) {
-        //Clone Template
+        //to clone template
         let template = document.querySelector(".task").cloneNode(true);
-        //Remover Classe '.hide'
+        //to remove class hide
         template.classList.remove("hide");
-        //Maniputar texto default
+        //to manipulate the text
         let templateText = template.querySelector(".taskTitle");
         templateText.textContent = taskText;
 
         let list = document.querySelector("#tasksContainer");
 
-        //Insetir na lista
-
+        //to insert in list
         list.appendChild(template);
+
+        //to add events to tasks
+        this.addEvents();
     }
-}
 
-const toDoList = new ToDo();
+    removeTask(task) {
+        //to find dad element
+        let parentEl = task.parentElement;
 
-// Events
+        //to remove of the list
+        parentEl.remove();
+    }
+
+    completeTask(task) {
+        
+    }
+
+    addEvents() {
+
+        let removeBtns = document.querySelectorAll(".fa-trash");
+        let lastRemoveBtn = removeBtns[removeBtns.length - 1];
+
+        let doneBtns = document.querySelectorAll(".fa-check");
+        let lastDoneBtn = doneBtns[doneBtns.length - 1];
+
+        //to add event to remover task
+        lastRemoveBtn.addEventListener("click", function() {
+            todo.removeTask(this);
+        });
+
+        //to add event to complete task
+        lastDoneBtn.addEventListener("click", function() {
+            todo.completeTask(this);
+        });
+    }
+
+};
+
+let todo = new ToDo();
+
+//Events
 let addBtn = document.querySelector("#add");
 
-addBtn.addEventListener("click", function (e) {
+addBtn.addEventListener("click", function(e) {
     e.preventDefault();
 
     let taskText = document.querySelector("#task");
-    
+
     if(taskText.value != "") {
-        toDoList.addTask(taskText.value);
+        todo.addTask(taskText.value);
     }
 
-    
-
-    //Limpar campo de texto
-    taskText.value = '';
 });
+
 

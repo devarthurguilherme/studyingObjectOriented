@@ -20,6 +20,8 @@ class ToDo {
 
         //to add events to tasks
         this.addEvents();
+
+        this.checkTasks('add');
     }
 
     removeTask(task) {
@@ -28,10 +30,13 @@ class ToDo {
 
         //to remove of the list
         parentEl.remove();
+
+        this.checkTasks('remove');
     }
 
     completeTask(task) {
-        
+        // to add class 'done'
+        task.classList.add('done');
     }
 
     addEvents() {
@@ -51,6 +56,23 @@ class ToDo {
         lastDoneBtn.addEventListener("click", function() {
             todo.completeTask(this);
         });
+    }
+
+    checkTasks(command) {
+        let msg = document.querySelector("#emptyTask");
+        //to add and to remove task
+        if(command === 'add') {
+            this.totalTasks += 1;
+        }else if(command === 'remove') {
+            this.totalTasks -= 1;
+        }
+
+        //to check if it has more than one task and adds or removes class
+        if(this.totalTasks == 1) {
+            msg.classList.remove("hide");
+        } else {
+            msg.classList.add("hide");
+        }
     }
 
 };

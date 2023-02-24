@@ -108,6 +108,10 @@ h2{
 #emptyTask {
     text-align: center;
 }
+
+#emptyTask.hide {
+    display: none;
+}
 /*End of Tasks Container*/
 /*Responsive Design*/
 @media (max-width: 480px) {

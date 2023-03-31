@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding:0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: .3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#eceff1;
+    box-shadow: .5px .5px 10px .5px #000;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.bi-moon {
+    display: none;
+}
+
+.bi-brightness-low {
+    display: block;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 4rem;
+    width: 60%;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .3);
+    display: flex;
+}
+
+.cardImage {
+    width: 50%;
+    position: relative;
+    background-color: #eff7fc;
+    padding: 2rem;
+}
+ 
+.cardImage span {
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.card img {
+    width: 130%;
+    transform: rotate(-25deg);
+    position: absolute;
+    right: -1rem;
+    top: 10rem;    
+}
+
+.cardDetails {
+    width: 50%;
+    padding: 2rem;
+}
+
+.cardDetails h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.description {
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.btn {
+    background-color: #444;
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    border-radius: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: .1;
+    font-weight: 700;
+}
+
+
+/*Dark Theme*/
+.dark, 
+.dark header {
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark .bi-brightness-low {
+    display: none;
+}
+
+.dark .bi-moon {
+    display: block;
+}
+
+.dark .card {
+    background-color: #37474f;
+}
+
+.dark .cardImage {
+    background-color: #273035;
+}
+
+.dark .subtitle {
+    color: #67b4f3;
+}
+
+.dark .description {
+    color:#2196f3;
+}
+
+.dark .btn {
+    background-color: #67b4f3;
+}
+/*End Dark Theme*/
